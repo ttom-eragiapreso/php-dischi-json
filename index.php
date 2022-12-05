@@ -16,11 +16,23 @@
 
   <div id="app">
 
-    <ul>
-      <li v-for="(disc, index) in discs" :key="index">
-        {{disc.title}}
-      </li>
-    </ul>
+
+
+    <div class="container">
+      <div class="row row-cols-3">
+        <div class="col" v-for="(disc, index) in discs" :key="index">
+          <div class="card mb-2">
+            <img :src="disc.poster" class="card-img-top" :alt="disc.title">
+            <div class="card-body text-center">
+              <h5 class="card-title">{{disc.title}}</h5>
+              <span>{{disc.author}}</span>
+              <h4>{{disc.year}}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
 
